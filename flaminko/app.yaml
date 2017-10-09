@@ -1,0 +1,13 @@
+application: flaminko-2017
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+  
+- url: /.*
+  script: index.php
+  
+  
