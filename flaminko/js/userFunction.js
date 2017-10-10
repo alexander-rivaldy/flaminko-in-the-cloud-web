@@ -26,11 +26,11 @@ function listUsers() {
         gapi.client.usersendpoint.listUsers().execute(function(resp) {
                 if (!resp.code) {
                         resp.items = resp.items || [];
-                        var result = "<table border='1'><tr><th>User Id</th><th>Username</th><th>Password</th><th>Name</th><th>Email</th><th>Credit</th><th>Admin</th></tr>";
+                        var result = "<div class='datagrid'><table><tr><th>User Id</th><th>Username</th><th>Password</th><th>Name</th><th>Email</th><th>Credit</th><th>Admin</th></tr>";
                         for (var i=0;i<resp.items.length;i++) {                                        
 								result = result+ "<tr><td>" + resp.items[i].id + "</td><td>" + resp.items[i].userName + "</td><td>" +  resp.items[i].password +  "</td><td>" +  resp.items[i].name +  "</td><td>" +  resp.items[i].email +  "</td><td>" +  resp.items[i].credit +  "</td><td>" +  resp.items[i].admin +  "</td></tr>";
                         }
-						result = result + "</table>";
+						result = result + "</table></div>";
                         document.getElementById('listUsersResult').innerHTML = result;
                 }
         });

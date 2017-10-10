@@ -15,10 +15,6 @@ $cmd = $_POST['btn-cmd'];
     }
     else if($cmd == "Log out"){
         session_destroy();
-        
-        //check for session
-        var_dump($_SESSION);
-        header("Location: ../main/index.php");
     }
 ?>
 <head>
@@ -48,6 +44,9 @@ $cmd = $_POST['btn-cmd'];
             document.getElementById("status").innerHTML = "Chopping up veggies...";
             //wait for gapi fully load
             register();
+        }
+        else if(cmd === "Log out"){
+            window.top.location='../main/index.php';
         }
     }
     

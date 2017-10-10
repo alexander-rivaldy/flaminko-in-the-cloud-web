@@ -7,7 +7,47 @@ handlers:
 - url: /css
   static_dir: css
   
-- url: /.*
-  script: index.php
+- url: /js
+  static_dir: js
   
+- url: /img
+  static_dir: img
   
+- url: /
+  script: main/index.php
+  
+- url: /login.php
+  script: main/login.php
+  
+- url: /main/login.php
+  script: main/login.php
+  
+- url: /register.php
+  script: main/register.php
+  
+- url: /main/register.php
+  script: main/register.php
+  
+- url: /profile/redirect.php
+  script: profile/redirect.php
+  
+- url: /main/index.php
+  script: main/index.php
+  
+- url: /profile/user.php
+  script: profile/user.php
+  
+- url: /game/game.php
+  script: game/game.php
+  
+- url: /user/player.php
+  script: user/player.php
+  
+- url: /user/admin.php
+  script: user/admin.php
+  
+- url: /utils/EditUser.php
+  script: utils/EditUser.php
+  
+- url: /utils/leaderboard.php
+  script: utils/leaderboard.php
